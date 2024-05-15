@@ -1,0 +1,19 @@
+.contactContainer {
+  /* transform: scaleX(110%); */
+  transform: translateX(-10%);
+  height: 100vh;
+}
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #fff;
+  font-size: smaller;
+  opacity: 50%;
+}
+.contactContainer button {
+  margin-top: 2rem;
+  padding: 5px 50px;
+}
+.contactContainer .form-control:focus {
+  border-color: #ffc107; 
+  box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.25); 
+}

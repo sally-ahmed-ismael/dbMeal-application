@@ -1,0 +1,17 @@
+.areacontainer{
+    width:120%;
+    transform: translateX(-20%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    gap: 20px;
+}
+.areacontainer .item svg{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+}
+.areacontainer .item p{
+    color: #fff;
+    text-decoration:none;
+    text-align: center;
+}

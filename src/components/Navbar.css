@@ -1,0 +1,145 @@
+body {
+  font-family: "Lato", sans-serif;
+  --hover-color:#ffc107;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sidebar .links{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap:5px;
+}
+
+.sidebar a {
+  padding-left: 5px;
+  margin: 10px ;
+  text-decoration: none;
+  color: #fff;
+  opacity: 70%;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar .item{
+  position: relative;
+}
+.sidebar .item .bar{
+  position: absolute;
+  bottom:0;
+  left:10%;
+  width:0%;
+  height: 2px;
+  background-color: var(--hover-color);
+  opacity:50%;
+  transition: 0.5s;
+
+}
+.sidebar .item a:hover ~ .bar{
+  width:80%;
+}
+
+.sidebar a:hover {
+  color: var(--hover-color);
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 5px;
+  border-radius: 6px;
+  border: none;
+  font-size: 30px;
+  z-index: 5;
+
+}
+
+.openbtn:hover {
+  color: var(--hover-color);
+}
+
+#main {
+  transition: margin-left 0.5s;
+  background-color: #fff;
+  color: #000;
+  position: fixed;
+  left:0;
+  width: 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 5;
+  opacity: 70%;
+  
+}
+#main img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 5;
+  margin-top: -5rem;
+
+}
+#main .main-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+#main .main-icons a{
+  color: #000;
+}
+#main .main-icons a:hover{
+  color: var(--hover-color);
+}
+
+.sidebar .footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.sidebar .footer .icons{
+  display: flex;
+  justify-content: center;
+}
+.sidebar .footer p{
+  /* margin: auto; */
+  text-align: center;
+  font-size: small;
+
+}
+.sidebar .footer a{
+  cursor: pointer;
+}
+.sidebar .footer a:hover{
+  color: var(--hover-color);
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}

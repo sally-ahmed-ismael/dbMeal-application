@@ -1,0 +1,31 @@
+.ingradients-container{
+    width:120%;
+    transform: translateX(-20%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    gap: 20px;
+}
+.ingradients-container .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ingradients-container .item svg{
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    
+}
+.ingradients-container .item h6{
+    color: #fff;
+    text-decoration:none;
+    text-align: center;
+}
+.ingradients-container .item p{
+    text-align: center;
+    height: 100px;
+    color: #fff;
+    font-size: small;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

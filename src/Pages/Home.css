@@ -1,0 +1,50 @@
+.mealcontainer {
+  margin: 2rem auto;
+  width: 120%;
+  transform: translateX(-20%);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  transition: 0.5s;
+}
+#search:focus {
+  border-color: #ffc107; 
+  box-shadow: 0 0 0 0.2rem rgba(255,193,7,0.25); 
+}
+.mealcontainer .meal {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+.mealcontainer .meal img {
+  width: 250px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.mealcontainer .meal .details {
+  width: 250px;
+  /* padding: 10px; */
+  background-color: #fff;
+  text-align: center;
+  color: #000;
+  opacity: 50%;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: translateY(102%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  
+}
+.mealcontainer .meal:hover .details {
+  height: 100%;
+  transition: 0.5s;
+  transform: translateY(0%);
+  align-self: center;
+}
